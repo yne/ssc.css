@@ -1,0 +1,31 @@
+/* use <menu> instead ? */
+
+menu {
+  padding: 0;/* UA */
+  display: inline-flex;
+}
+
+menu>label:not(:first-child):not(:last-child)>input[type=radio]+*,
+menu>*:not(:first-child):not(:last-child) {
+  border-radius: 0 0 0 0;
+}
+menu>*:not(:first-child){
+  margin-left: calc(var(--border-size)*-1);
+}
+
+menu>label:first-child>input[type=radio]+*,
+menu>*:first-child {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+menu>label:last-child>input[type=radio]+*,
+menu>*:last-child {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+menu>label>input[type=radio] {
+  display: none;
+}
+

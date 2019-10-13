@@ -1,0 +1,60 @@
+/*
+  <div class="carousel">
+    <ul class="scroll" scroll-behavior="smooth">
+      <li class="scroll-item-outer">
+        <div id="slide-1" class="scroll-item">
+          <img src="https://images.wallpaperscraft.com/image/road_sunset_horizon_marking_118582_1920x1080.jpg">
+        </div>
+      </li>
+*/
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+.carousel {
+	width: 100%;
+	/*height: 300px;*/
+	contain: strict;
+	margin-top: 1vw;
+	border-radius: 3vmin;
+}
+
+.scroll {
+	display: flex;
+	align-items: center;
+	overflow-y: hidden;
+	width: 100%;
+	height: 100%;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.scroll-item {
+	width: 100vw;
+}
+
+.scroll-item>img {
+	object-fit: contain;
+	width: 100%;
+}
+.scroll-item-outer {
+	margin: 1vw;
+}
+
+.scroll {
+		scroll-snap-type: x mandatory;
+	}
+	.scroll-item-outer {
+		scroll-snap-align: center;
+	}
+

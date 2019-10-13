@@ -1,0 +1,74 @@
+@import url("progress.css");
+@import url("form.css");
+@import url("fieldset.css");
+@import url("tooltip.css");
+@import url("badge.css");
+@import url("alert.css");
+@import url("card.css");
+
+:root {
+  --size: 16px;
+  --radius: 3px;
+	--padding: 7px;
+  --border-color: #CCC;
+  --border-size: 1px;
+  --back: white;
+  --text: black;
+  --text-alt: white; /* used in variantes */
+  --back-primary: #9C27B0;
+  --back-danger: #e51c23;
+  --back-info: #2196F3;
+  --back-warn: #ff9800;
+}
+
+body {
+  font-size: var(--size);
+	font-family: "Avenir Next","Segoe UI","Roboto","Ubuntu","Cantarell","Droid Sans","Helvetica Neue",sans-serif;
+	color: var(--text);
+	background: var(--back);
+}
+.primary {
+  color: var(--text-alt);
+  border-color: var(--back-primary);
+  background: var(--back-primary);
+}
+
+.danger {
+  color: var(--text-alt);
+  border-color: var(--back-danger);
+  background: var(--back-danger);
+}
+
+.info {
+  color: var(--text-alt);
+  border-color: var(--back-info);
+  background: var(--back-info);
+}
+
+.warn {
+  color: var(--text-alt);
+  border-color: var(--back-warn);
+  background: var(--back-warn);
+}
+small {
+	filter:contrast(0.5);
+}
+a {color:var(--color)!important;}
+hr,fieldset{
+	border-width: calc(var(--border-size)/2);
+	border-color: var(--border-color);
+	border-style: solid;
+}
+/* display */
+.grid {
+  display: grid;
+}
+.flex {
+	display: flex;
+}
+.flex > * {
+	flex: 1 100%;
+}
+
+.ib{display:inline-block;}
+

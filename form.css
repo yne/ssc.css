@@ -1,0 +1,60 @@
+
+[aria-label]{
+/*material*/
+}
+[aria-label]:after{
+	content:attr(aria-label);
+}
+
+label>input[type=radio]:checked+* {
+  box-shadow: 0 -2px 0 0px var(--back-primary) inset;
+}
+:disabled{
+	filter: brightness(.95) saturate(.5);
+	cursor: initial;
+}
+/* input-like form element box*/
+input,
+button,
+[type=button],
+select,
+textarea,
+label>input+* {
+  background: var(--back);
+  padding: calc(var(--padding)) calc(var(--padding)*2);
+  border: var(--border-size) solid var(--border-color);
+  border-radius: var(--radius);
+	color:var(--color);
+}
+/* button-like form element textes */
+button,
+[type=button],
+input[type=reset],
+input[type=file],
+input[type=submit],
+label>input[type=radio]+*,
+label>input[type=checkbox]+* {
+  cursor: pointer;
+	text-align:center;
+	font-size:var(--size);
+	text-decoration:none;
+  user-select: none;
+}
+/*chrome adapt */
+select{
+	padding-top: calc(var(--padding) - 1px);
+	padding-bottom: calc(var(--padding) - 1px);
+}
+input[type=date],
+input[type=time],
+input[type=week],
+input[type=month],
+input[type=datetime-local]{
+	padding-top: calc(var(--padding) - 3px);
+	padding-bottom: calc(var(--padding) - 2px);
+}
+
+input[type=file]{
+	padding-top: calc(var(--padding) - 3px);
+	padding-bottom: calc(var(--padding) - 3px);
+}

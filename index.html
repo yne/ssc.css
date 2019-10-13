@@ -1,0 +1,195 @@
+<!doctype html>
+<link rel=stylesheet href=ssc.css>
+<h1>SSC.CSS</h1>
+<small>Small Semantic-first Class-less CSS</small>
+
+<h2>Small</h2>
+<p>
+People create <a href="https://www.youtube.com/watch?v=RCh3Q08HMfs">amazing things</a> within 4K.
+Let's do the same.
+</p>
+
+<h2>Semantic-first</h2>
+<p>
+Stop repeating 4 times that you have a button:
+<pre>
+&lt;div class="btn-group" role="group" ... &gt;
+&lt;button type="button" class="button button-primary"&gt;
+...</pre>
+But do this
+<pre>
+&lt;menu&gt;
+&lt;button&gt;
+...</pre>
+</p>
+
+<h2>Class-last</h2>
+<p>Only variantes and utilities are acceptable classes
+<>
+</p>
+
+<h2>CSS</h2>
+<ul>
+<li>x No LESS/SASS preprocessor.</li>
+<li>x No <a href="https://medium.com/p/9a8cb347c5b5">NPM</a> requirement for building.</li>
+<li>x No <a href="https://getbootstrap.com/docs/4.3/getting-started/javascript/">JS-dependant</a> components.</li>
+<li>v Use pure vanilla CSS.</li>
+<li>v CSS variables.</li>
+</ul>
+<h1>Variables</h1>
+<form onsubmit="this.root.value.split(/;?\n/).forEach(l=>l&&document.documentElement.style.setProperty(...l.split(/:\s*/)));return false">
+<textarea cols=40 rows=15 name=root>
+--size: 16px;
+--radius: 3px;
+--padding: 7px;
+--border-color: #CCC;
+--border-size: 1px;
+--back: white;
+--text: black;
+--text-alt: white;
+--back-primary: #9C27B0;
+--back-danger: #e51c23;
+--back-info: #2196F3;
+--back-warn: #ff9800;
+</textarea>
+<hr/>
+<menu>
+<input type=reset>
+<input type=submit value=Preview>
+</menu>
+</form>
+<h1>form</h1>
+<fieldset>
+<legend>disabled:<input type=checkbox onclick="this.closest('fieldset').disabled=this.checked"></legend>
+<textarea></textarea>
+
+<select>
+	<option>option0</option>
+	<optgroup label=group>
+		<option>option2</option>
+		<option>option3</option>
+	</optgroup>
+</select>
+
+<input list=datalist>
+<datalist id=datalist>
+  <option>option1</option>
+  <option>option2</option>
+</datalist>
+<input type=text>
+<input type=email>
+<input type=number>
+<input type=password>
+<input type=search>
+<input type=tel>
+<input type=text>
+<input type=url>
+
+<input type=date>
+<input type=datetime-local>
+<input type=month>
+<input type=time>
+<input type=week>
+<hr>
+<input type=checkbox>label</input>
+<input type=radio>label</input>
+<input type=range></input>
+<hr>
+<!--div class=grid data-template="auto-flow / 1fr 1fr 1fr"-->
+<button>button</button>
+<input type=button value="input[type=button]"/>
+<input type=reset />
+<input type=submit />
+<input type=file />
+<hr/>
+<button>button</button>
+<button class=primary>.primary</button>
+<button class=danger>.error</button>
+<button class=warn>.warn</button>
+<button class=info>.info</button>
+<hr/>
+<button disabled>button[disabled]</button>
+<button disabled class=primary>.primary</button>
+<button disabled class=danger>.error</button>
+<button disabled class=warn>.warn</button>
+<button disabled class=info>.info</button>
+</fieldset>
+
+<h1>&lt;progress&gt; spinner</h1>
+<p>
+People love @animation based spinners, but they consume 1 full core.
+To be energy-efficent we'll use a goodol' GIF in our &lt;progress&gt; element: <progress style=--size:2em></progress>
+<button disabled>Sending <progress></progress></button>
+</dl>
+
+<!--
+<progress value=.5></progress>
+<meter value=.5></meter>
+-->
+
+<h1>&lt;menu&gt; groupping</h1>
+
+<h2>menu button</h2>
+<menu>
+    <button>Left</button>
+    <button>Center</button>
+    <button>Right</button>
+</menu>
+
+<h2>menu radio</h2>
+<menu>
+    <label><input type=radio name=x value=1><div>𝐁</div></label>
+    <label><input type=radio name=x value=2><div>𝐼</div></label>
+    <label><input type=radio name=x value=3 checked><div>u͢</div></label>
+</menu>
+<menu>
+    <label><input type=radio name=a value=1><div>⇤</div></label>
+    <label><input type=radio name=a value=2 checked><div>☰</div></label>
+    <label><input type=radio name=a value=3><div>↦</div></label>
+</menu>
+
+<h2>menu a</h2>
+<menu>
+    <a type=button href=#>1</a>
+    <a type=button href=#>2</a>
+    <a type=button href=#>3</a>
+    <a type=button href=#>4</a>
+    <a type=button href=#>5</a>
+    <a type=button href=#>6</a>
+</menu>
+
+<h1>[data-tooltip]</h1>
+This attribut will add a tooltip if you <u data-tooltip="thank you, bye !">hover</u> a specific element.
+Since, hover does not exist on phone, you shoud also make your element <u tabindex=-1 data-tooltip="so I can be displayed on phone too">focusable</u>
+<button disabled data-tooltip="Insufisent privilege">Activate</button>
+<b data-tooltip="thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !">Long version</b>
+
+<h1>&lt;sup&gt; badge</h1>
+
+<p>Badge are usefull to indicate changed state (counter, validity, ...):</p>
+<p><a href=#>My reports</a><sup>new</sup></p>
+<p>They play well with variantes:</p>
+<p><button>Messages <sup class=info>12</sup></button></p>
+<p><button is=a href="/">Messages <sup class=warn>12</sup></button></p>
+
+<h1>[role=alert]</h1>
+
+<div role=alert open>
+	Oopsie Woopsie !! You can't dissmiss me !
+</div>
+
+<details role=alert open>
+	<summary is=a ping=/></summary>
+	Oopsie Woopsie !! Don't dissmiss me :D
+</details>
+
+<details role=alert open class=info>
+	<summary></summary>
+	This play well with variantes
+</details>
+
+<h1>flex</h1>
+<ul class=flex>
+    <li><button style=order:2>1</button></li>
+    <li><button style=order:1>2</button></li>
+</ul>

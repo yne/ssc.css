@@ -1,0 +1,14 @@
+[role=alert] {
+	padding:var(--padding);
+	border-radius: var(--radius);
+	border-width: var(--border-size);
+  border-style: solid;
+}
+[role=alert]>summary {
+	float: right;
+	color: transparent;
+	-webkit-appearance: searchfield-cancel-button;
+}
+[role=alert]:not([open]) {
+	display:none;
+}

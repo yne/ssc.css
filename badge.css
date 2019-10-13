@@ -1,0 +1,6 @@
+sup{ /*q,sup,sub,var*/
+	border-radius:1em;
+	box-shadow: 0 0 4px -1px var(--text);
+	text-shadow: 0 0 4px -1px var(--back);
+	padding: .1em .4em;
+}
