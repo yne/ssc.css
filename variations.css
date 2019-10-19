@@ -1,0 +1,28 @@
+.primary {
+  color: var(--text-alt);
+  border-color: var(--back-primary);
+  background: var(--back-primary);
+}
+
+.danger {
+  color: var(--text-alt);
+  border-color: var(--back-danger);
+  background: var(--back-danger);
+}
+
+.info {
+  color: var(--text-alt);
+  border-color: var(--back-info);
+  background: var(--back-info);
+}
+
+.warn {
+  color: var(--text-alt);
+  border-color: var(--back-warn);
+  background: var(--back-warn);
+}
+
+.flat {
+  border-color: transparent;
+  background: none;
+}

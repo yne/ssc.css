@@ -1,16 +1,8 @@
-
-[aria-label]{
-/*material*/
-}
-[aria-label]:after{
-	content:attr(aria-label);
-}
-
 label>input[type=radio]:checked+* {
   box-shadow: 0 -2px 0 0px var(--back-primary) inset;
 }
 :disabled{
-	filter: brightness(.95) saturate(.5);
+	filter: contrast(.5);
 	cursor: initial;
 }
 /* input-like form element box*/

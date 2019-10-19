@@ -1,0 +1,17 @@
+section {
+	margin: var(--padding) calc(var(--padding) * 2);
+	border-radius: var(--radius);
+	box-shadow: 0 1px 3px rgba(0,0,0,.3);
+	background: var(--back);
+}
+section > header {
+	background: var(--back-alt);
+	border-bottom: var(--border-size) solid var(--border-color);
+	padding: var(--padding) calc(var(--padding) * 2);
+}
+section > p {
+	padding: var(--padding) calc(var(--padding) * 2);
+}
+section > footer {
+}
+

@@ -12,7 +12,10 @@
 	border-radius:var(--radius);
 	opacity: 0;
 	left: 0;
-	width: 200px;
+	text-overflow: ellipsis;
+	overflow:hidden;
+	max-width: 200px;
+	white-space: pre;
   padding: .5em;
 	font-weight: initial;text-decoration:initial;text-align:initial;
 	font-size: var(--size);

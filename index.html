@@ -1,9 +1,30 @@
 <!doctype html>
 <link rel=stylesheet href=ssc.css>
-<h1>SSC.CSS</h1>
-<small>Small Semantic-first Class-less CSS</small>
+<main>
+<header class=sticky-top hidden>
+	<img src="">
+	<nav>
+		<a href="">here</a>
+		<a href="">here</a>
+	</nav>
+	<nav>
+		<a href="">here</a>
+		<a href="">here</a>
+	</nav>
+</header>
 
-<h2>Small</h2>
+<div class=hero >
+<img style=margin:64px src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 3"><path d="M1,3 0,2 1,2 0,1 1,0 2,1 1,1 2,2 M3,3 2,2 3,2 2,1 3,0 4,1 3,1 4,2 M6,2 5,3 4,2 4,1 5,0 6,1 5,1 5,2"></path></svg>'>
+<p>
+A
+<a href="#small">Small</a>
+<a href="#small">Semantic-first</a>
+<a href="#small">Class-less</a>
+<a href="#small">CSS</a>
+boosted with variables.</p>
+</div>
+
+<a name=small></a><h2>Small</h2>
 <p>
 People create <a href="https://www.youtube.com/watch?v=RCh3Q08HMfs">amazing things</a> within 4K.
 Let's do the same.
@@ -38,7 +59,7 @@ But do this
 </ul>
 <h1>Variables</h1>
 <form onsubmit="this.root.value.split(/;?\n/).forEach(l=>l&&document.documentElement.style.setProperty(...l.split(/:\s*/)));return false">
-<textarea cols=40 rows=15 name=root>
+<textarea cols=25 rows=15 name=root>
 --size: 16px;
 --radius: 3px;
 --padding: 7px;
@@ -70,6 +91,13 @@ But do this
 		<option>option3</option>
 	</optgroup>
 </select>
+<select multiple>
+	<option>option0</option>
+	<optgroup label=group>
+		<option>option2</option>
+		<option>option3</option>
+	</optgroup>
+</select>
 
 <input list=datalist>
 <datalist id=datalist>
@@ -84,6 +112,8 @@ But do this
 <input type=tel>
 <input type=text>
 <input type=url>
+<input type=color list>
+<input type=color>
 
 <input type=date>
 <input type=datetime-local>
@@ -107,12 +137,14 @@ But do this
 <button class=danger>.error</button>
 <button class=warn>.warn</button>
 <button class=info>.info</button>
+<button class=flat>.flat</button>
 <hr/>
 <button disabled>button[disabled]</button>
 <button disabled class=primary>.primary</button>
 <button disabled class=danger>.error</button>
 <button disabled class=warn>.warn</button>
 <button disabled class=info>.info</button>
+<button disabled class=flat>.flat</button>
 </fieldset>
 
 <h1>&lt;progress&gt; spinner</h1>
@@ -159,10 +191,14 @@ To be energy-efficent we'll use a goodol' GIF in our &lt;progress&gt; element: <
 </menu>
 
 <h1>[data-tooltip]</h1>
-This attribut will add a tooltip if you <u data-tooltip="thank you, bye !">hover</u> a specific element.
-Since, hover does not exist on phone, you shoud also make your element <u tabindex=-1 data-tooltip="so I can be displayed on phone too">focusable</u>
-<button disabled data-tooltip="Insufisent privilege">Activate</button>
-<b data-tooltip="thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !">Long version</b>
+This attribut will add a tooltip if you <u data-tooltip="Hello !">hover</u> a specific element.
+Since, hover does not exist on phone, you shoud also make your element <u tabindex=-1 data-tooltip="Nice !">focusable</u>
+<p>
+<button disabled data-tooltip="Insufisent privilege">Disabled</button> good for explaination
+</p>
+<b data-tooltip="thank you, bye !
+thank you, bye !thank you, bye !
+thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !">Long version</b>
 
 <h1>&lt;sup&gt; badge</h1>
 
@@ -173,6 +209,8 @@ Since, hover does not exist on phone, you shoud also make your element <u tabind
 <p><button is=a href="/">Messages <sup class=warn>12</sup></button></p>
 
 <h1>[role=alert]</h1>
+
+<p>Can also be used as snackbar / notification.</p>
 
 <div role=alert open>
 	Oopsie Woopsie !! You can't dissmiss me !
@@ -188,8 +226,46 @@ Since, hover does not exist on phone, you shoud also make your element <u tabind
 	This play well with variantes
 </details>
 
+<h1>&lt;section&gt; cards</h1>
+A card is paddingless/marginless so you can embed anything in it
+<section><img src=https://picsum.photos/200 /></section>
+you can even create a modal with it
+<section>
+	<header><h4>However</h4></header>
+	<p>It support header/footer</p>
+	<footer>
+		<span>And it's good</span>
+		<span>Was this article usefull ? &nbsp;
+			<menu>
+				<button>yes 👍</button>
+				<button>no 👎</button>
+			</menu>
+		</span>
+	</footer>
+</section>
+
 <h1>flex</h1>
-<ul class=flex>
-    <li><button style=order:2>1</button></li>
-    <li><button style=order:1>2</button></li>
-</ul>
+.flew will give you a wide-spaced items
+<div class=flex>
+<section>1</section>
+<section>2</section>
+<section>3</section>
+</div>
+
+</main>
+
+<footer>
+<main>
+<footer>
+<nav list>
+<a href=#>Jobs</a>
+<a href=#>About</a>
+<a href=#>Contact</a>
+<a href=#>Legal</a>
+</nav>
+<img width=64 src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 3"><path fill="lightgrey" d="M1,3 0,2 1,2 0,1 1,0 2,1 1,1 2,2 M3,3 2,2 3,2 2,1 3,0 4,1 3,1 4,2 M6,2 5,3 4,2 4,1 5,0 6,1 5,1 5,2"></path></svg>'>
+<i>some copyright</i>
+</footer>
+</main>
+</footer>
+

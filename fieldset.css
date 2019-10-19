@@ -2,6 +2,7 @@
 
 menu {
   padding: 0;/* UA */
+	margin: 0;
   display: inline-flex;
 }
 
