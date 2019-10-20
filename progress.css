@@ -1,3 +1,11 @@
+/**
+<h1>&lt;progress&gt; spinner</h1>
+<p>
+People love @animation based spinners, but they consume 1 full core.
+To be energy-efficent we'll use a goodol' GIF in our &lt;progress&gt; element:
+<progress style=--size:2em></progress>
+<button disabled>Sending <progress></progress></button>
+**/
 progress:not([value]){
 	position: relative;
 	-webkit-appearance: textarea;

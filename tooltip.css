@@ -1,4 +1,15 @@
+/**
+<h1>[data-tooltip]</h1>
+This attribut will add a tooltip if you <u data-tooltip="Hello !">hover</u> a specific element.
+Since, hover does not exist on phone, you shoud also make your element <u tabindex=-1 data-tooltip="Nice !">focusable</u>
+<p>
+<button disabled data-tooltip="Insufisent privilege">Disabled</button> good for explaination
+</p>
+<b data-tooltip="thank you, bye !
+thank you, bye !thank you, bye !
+thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !thank you, bye !">Long version</b>
 
+**/
 [data-tooltip]{
   position: relative;
 }

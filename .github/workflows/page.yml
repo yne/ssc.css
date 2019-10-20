@@ -1,0 +1,32 @@
+name: page
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      PUBLISH_DIR: static
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build
+      run: |
+        mkdir -p $PUBLISH_DIR
+        (grep -Po '\w+.css' |
+         xargs sed '/\/\*.*\*\// d; /\/\*/,/\*\// d' |
+         tr -d '\n' |
+         sed -E 's/([{;:,>}])[ \t]+/\1/g;s/[ \t]+([{>}])/\1/g'
+        ) < ssc.css > $PUBLISH_DIR/ssc.min.css
+        echo min.gz size is $(cat $PUBLISH_DIR/ssc.min.css|gzip|wc -c)
+
+        (cat .github/.init
+         grep -Po '\w+.css' |
+         xargs awk '/\/\*\*/{p=1;next}/\*\*\//{p=0}p'
+         cat .github/.fini
+        ) < ssc.css > $PUBLISH_DIR/index.html
+    - uses: peaceiris/actions-gh-pages@v2.5.0
+      env:
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+
+

@@ -1,7 +1,40 @@
-/* use <menu> instead ? */
+/**
+
+<h1>&lt;menu&gt; groupping</h1>
+
+<h2>menu button</h2>
+<menu>
+  <button>Left</button>
+  <button>Center</button>
+  <button>Right</button>
+</menu>
+
+<h2>menu radio</h2>
+<menu>
+  <label><input type=radio name=x value=1><div>𝐁</div></label>
+  <label><input type=radio name=x value=2><div>𝐼</div></label>
+  <label><input type=radio name=x value=3 checked><div>u͢</div></label>
+</menu>
+<menu>
+  <label><input type=radio name=a value=1><div>⇤</div></label>
+  <label><input type=radio name=a value=2 checked><div>☰</div></label>
+  <label><input type=radio name=a value=3><div>↦</div></label>
+</menu>
+
+<h2>menu a</h2>
+<menu>
+  <a type=button href=#>1</a>
+  <a type=button href=#>2</a>
+  <a type=button href=#>3</a>
+  <a type=button href=#>4</a>
+  <a type=button href=#>5</a>
+  <a type=button href=#>6</a>
+</menu>
+
+**/
 
 menu {
-  padding: 0;/* UA */
+  padding: 0;
 	margin: 0;
   display: inline-flex;
 }

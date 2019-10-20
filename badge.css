@@ -1,4 +1,15 @@
-sup{ /*q,sup,sub,var*/
+/**
+<h1>&lt;sup&gt; badge</h1>
+
+<p>Badge are usefull to indicate changed state (counter, validity, ...):</p>
+<p><a href=#>My reports</a><sup>new</sup></p>
+<p>They play well with variantes:</p>
+<p><button>Messages <sup class=info>12</sup></button></p>
+<p><button is=a href="/">Messages <sup class=warn>12</sup></button></p>
+
+**/
+
+sup {
 	border-radius:1em;
 	box-shadow: 0 0 4px -1px var(--text);
 	text-shadow: 0 0 4px -1px var(--back);

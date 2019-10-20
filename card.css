@@ -1,3 +1,22 @@
+/**
+<h1>&lt;section&gt; cards</h1>
+A card is paddingless/marginless so you can embed anything in it
+<section><img src=https://picsum.photos/200 /></section>
+you can even create a modal with it
+<section>
+	<header><h4>However</h4></header>
+	<p>It support header/footer</p>
+	<footer>
+		<span>And it's good</span>
+		<span>Was this article usefull ? &nbsp;
+			<menu>
+				<button>yes 👍</button>
+				<button>no 👎</button>
+			</menu>
+		</span>
+	</footer>
+</section>
+**/
 section {
 	margin: var(--padding) calc(var(--padding) * 2);
 	border-radius: var(--radius);

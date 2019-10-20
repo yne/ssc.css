@@ -1,0 +1,42 @@
+/**
+<h1>Variables</h1>
+
+<form onsubmit="this.root.value.split(/;?\n/).forEach(l=>l&&document.documentElement.style.setProperty(...l.split(/:\s{0,}/)));return false">
+<textarea cols=25 rows=15 name=root>
+--size: 16px;
+--radius: 3px;
+--padding: 7px;
+--border-color: #CCC;
+--border-size: 1px;
+--back: white;
+--text: black;
+--text-alt: white;
+--back-primary: #9C27B0;
+--back-danger: #e51c23;
+--back-info: #2196F3;
+--back-warn: #ff9800;
+</textarea>
+<hr/>
+<menu>
+<input type=reset>
+<input type=submit value=Preview>
+</menu>
+</form>
+**/
+:root {
+	--font: "Avenir Next","Segoe UI","Roboto","Ubuntu","Cantarell","Droid Sans","Helvetica Neue",sans-serif;
+  --size: 16px;
+  --radius: 3px;
+	--padding: 7px;
+  --border-color: #DDD;
+  --border-size: 1px;
+  --back: white;
+  --back-alt: #F0F0F0;
+  --text: black;
+  --text-alt: white;
+  --back-primary: #9C27B0;
+  --back-danger: #e51c23;
+  --back-info: #2196F3;
+  --back-warn: #ff9800;
+}
+

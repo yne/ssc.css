@@ -1,0 +1,76 @@
+/**
+<h1>Layout</h1>
+A typical web page is 
+<pre>
+header
+	img nav nav
+...
+footer
+ nav img nav
+</pre>
+
+Use the main element to limit the max-width of an element.
+
+If you want your full page to be 
+<pre>
+main
+ header
+ ...
+ footer
+</pre>
+<pre>
+header
+main
+ article
+footer
+</pre>
+**/
+
+body {
+  font-size: var(--size);
+	font-family: var(--font);
+	color: var(--text);
+	background: var(--back);
+	margin:0;
+}
+main {
+	max-width:600px;
+	width:100%;
+	margin: auto;
+}
+
+small {
+	filter:contrast(0.5);
+}
+a {color:var(--color)!important;}
+hr,fieldset{
+	border-width: calc(var(--border-size) / 2);
+	border-color: var(--border-color);
+	border-style: solid;
+	border-radius: var(--radius);
+}
+
+
+a[name]{
+	padding-top: 50px;
+}
+
+pre, samp, kbd{
+  overflow: scroll;
+	background: var(--back-alt);
+}
+figcaption {
+	text-align: center;
+}
+nav[list]{
+	display: flex;
+	flex: 0;
+	flex-flow: column;
+}
+footer {
+	display: flex;justify-content: space-between;
+	background: var(--back-alt);
+	padding: var(--padding) calc(var(--padding) * 2);
+}
+footer>*{align-self: center;}
+

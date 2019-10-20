@@ -1,3 +1,73 @@
+/**
+<h1>form</h1>
+<fieldset>
+<legend>disabled:<input type=checkbox onclick="this.closest('fieldset').disabled=this.checked"></legend>
+<textarea></textarea>
+
+<select>
+	<option>option0</option>
+	<optgroup label=group>
+		<option>option2</option>
+		<option>option3</option>
+	</optgroup>
+</select>
+<select multiple>
+	<option>option0</option>
+	<optgroup label=group>
+		<option>option2</option>
+		<option>option3</option>
+	</optgroup>
+</select>
+
+<input list=datalist>
+<datalist id=datalist>
+  <option>option1</option>
+  <option>option2</option>
+</datalist>
+<input type=text>
+<input type=email>
+<input type=number>
+<input type=password>
+<input type=search>
+<input type=tel>
+<input type=text>
+<input type=url>
+<input type=color list>
+<input type=color>
+
+<input type=date>
+<input type=datetime-local>
+<input type=month>
+<input type=time>
+<input type=week>
+<hr>
+<input type=checkbox>label</input>
+<input type=radio>label</input>
+<input type=range></input>
+<hr>
+<!--div class=grid data-template="auto-flow / 1fr 1fr 1fr"-->
+<button>button</button>
+<input type=button value="input[type=button]"/>
+<input type=reset />
+<input type=submit />
+<input type=file />
+<hr/>
+<button>button</button>
+<button class=primary>.primary</button>
+<button class=danger>.error</button>
+<button class=warn>.warn</button>
+<button class=info>.info</button>
+<button class=flat>.flat</button>
+<hr/>
+<button disabled>button[disabled]</button>
+<button disabled class=primary>.primary</button>
+<button disabled class=danger>.error</button>
+<button disabled class=warn>.warn</button>
+<button disabled class=info>.info</button>
+<button disabled class=flat>.flat</button>
+</fieldset>
+
+**/
 label>input[type=radio]:checked+* {
   box-shadow: 0 -2px 0 0px var(--back-primary) inset;
 }

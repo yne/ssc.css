@@ -1,3 +1,4 @@
+@import url("variables.css");
 @import url("progress.css");
 @import url("form.css");
 @import url("fieldset.css");
@@ -6,83 +7,6 @@
 @import url("alert.css");
 @import url("card.css");
 @import url("variations.css");
-
-:root {
-	--font: "Avenir Next","Segoe UI","Roboto","Ubuntu","Cantarell","Droid Sans","Helvetica Neue",sans-serif;
-  --size: 16px;
-  --radius: 3px;
-	--padding: 7px;
-  --border-color: #DDD;
-  --border-size: 1px;
-  --back: white;
-  --back-alt: #F0F0F0;/* header,footer */
-  --text: black;
-  --text-alt: white; /* used in variantes */
-  --back-primary: #9C27B0;
-  --back-danger: #e51c23;
-  --back-info: #2196F3;
-  --back-warn: #ff9800;
-}
-
-body {
-  font-size: var(--size);
-	font-family: var(--font);
-	color: var(--text);
-	background: var(--back);
-	margin:0;
-}
-main {
-	max-width:600px;
-	width:100%;
-	margin: auto;
-}
-body > main {
-/*	padding: calc(var(--padding) * 2);*/
-}
-
-small {
-	filter:contrast(0.5);
-}
-a {color:var(--color)!important;}
-hr,fieldset{
-	border-width: calc(var(--border-size) / 2);
-	border-color: var(--border-color);
-	border-style: solid;
-	border-radius: var(--radius);
-}
-/* utils */
-.ib{display:inline-block;}
-[class^=grid] {display: grid;}
-/**/
-/*         ; justify-content: space-between;
-[ ]    [ ] 
- [ ]  [ ]
-[   ][   ] 1
-*/
-/*
-a[name]:after{content:"🔗";opacity:.1;font-size:16px;}
-a[name]:after:hover{opacity:.1}
-*/
-pre, samp, kbd{
-  overflow: scroll;
-	background: var(--back-alt);
-}
-nav[list]{
-	display: flex;
-	flex: 0;
-	flex-flow: column;
-}
-footer {
-	display: flex;justify-content: space-between;
-}
-body>footer, section>footer {
-	background: var(--back-alt);
-	border-top: var(--border-size) solid var(--border-color);
-	padding: var(--padding) calc(var(--padding) * 2);
-}
-footer>*{align-self: center;}
-.flex {display: flex;}
-.flex > * {flex: 1 100%;}
-[class^=sticky]{position:sticky;}
-[class$=-top]{top:0;}
+@import url("html.css");
+@import url("utils.css");
 

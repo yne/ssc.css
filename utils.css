@@ -1,0 +1,17 @@
+/**
+<h1>flex</h1>
+.flew will give you a wide-spaced items
+<div class=flex>
+<section>1</section>
+<section>2</section>
+<section>3</section>
+</div>
+
+**/
+
+.flex {display: flex;}
+.flex > * {flex: 1 100%;}
+[class^=sticky]{position:sticky;}
+[class$=-top]{top:0;}
+.ib{display:inline-block;}
+[class^=grid] {display: grid;}

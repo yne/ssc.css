@@ -1,3 +1,23 @@
+/**
+<h1>[role=alert]</h1>
+
+<p>Can also be used as snackbar / notification.</p>
+
+<div role=alert open>
+	Oopsie Woopsie !! You can't dissmiss me !
+</div>
+
+<details role=alert open>
+	<summary is=a ping=/></summary>
+	Oopsie Woopsie !! Don't dissmiss me :D
+</details>
+
+<details role=alert open class=info>
+	<summary></summary>
+	This play well with variantes
+</details>
+**/
+
 [role=alert] {
 	padding:var(--padding);
 	border-radius: var(--radius);
