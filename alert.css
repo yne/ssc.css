@@ -27,7 +27,10 @@
 [role=alert]>summary {
 	float: right;
 	color: transparent;
-	-webkit-appearance: searchfield-cancel-button;
+}
+[role=alert]>summary:after {
+	content: "×";
+	color: initial;
 }
 [role=alert]:not([open]) {
 	display:none;
