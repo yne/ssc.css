@@ -6,7 +6,7 @@ Small Semantic-first Class-last CSS
 
 # Demo & Doc
 
-https://yne.github.com/ssc.css
+https://yne.github.io/ssc.css
 
 # Use it
 
