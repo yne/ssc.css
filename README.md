@@ -4,6 +4,8 @@
 Small Semantic-first Class-last CSS
 </p>
 
+Inspired from this [UI Kit Mockup](https://framerusercontent.com/images/o9drPb3oNDAcMIqZorPkQLqfzIE.png)
+
 # Demo & Doc
 
 https://yne.github.io/ssc.css
